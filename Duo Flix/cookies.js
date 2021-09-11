@@ -1,7 +1,7 @@
-// cookie过滤字段
+// cookie
 const cookieFilterKeys = [ 'name', 'domain', 'value', 'path', 'secure', 'httpOnly', 'expirationDate' ];
 
-// 利用api获取相应域名的cookies
+//cookies
 var getDomainCookies = function(url, callback) {
     return chrome.cookies.getAll({
         url: url
@@ -13,7 +13,7 @@ var getDomainCookies = function(url, callback) {
     });
 };
 
-// 从文本中加载cookies
+// cookies
 var loadCookies = function(data) {
     _.each(data.cookies, function(cookie) {
         cookie.url = data.url;
